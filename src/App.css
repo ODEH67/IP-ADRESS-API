@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* .App {
+  text-align: center;
+} */
+
+
+/* the "naming" for the map stayling should be like this, otherwise it will not work, but still u can stayle it */
+.leaflet-container {
+width: 65vh;
+height: 61vh;
+}
+
+.additional-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drop-Menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  align-items: center;
+  padding: 0.3em;
+  }
+  
+  .drop-Menu select {
+  background-color: #00B5B5;
+  font-size: 1em;
+  padding: 5px;
+  color: #ffffff;
+  border-color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  
+  .drop-Menu option {
+      cursor: pointer;
+  }
+
+  .Menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+@media only screen and (max-width: 630px) {
+  .leaflet-container {
+    width: 48vh;
+    height: 36vh;
+  }
+}
