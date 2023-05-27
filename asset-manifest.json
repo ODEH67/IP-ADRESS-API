@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/IP-ADRESS-API/static/css/main.51a9129d.css",
+    "main.js": "/IP-ADRESS-API/static/js/main.b61ac553.js",
+    "static/js/787.13980af2.chunk.js": "/IP-ADRESS-API/static/js/787.13980af2.chunk.js",
+    "static/media/marker1.gif": "/IP-ADRESS-API/static/media/marker1.ace1cb32580d0bfff374.gif",
+    "index.html": "/IP-ADRESS-API/index.html",
+    "main.51a9129d.css.map": "/IP-ADRESS-API/static/css/main.51a9129d.css.map",
+    "main.b61ac553.js.map": "/IP-ADRESS-API/static/js/main.b61ac553.js.map",
+    "787.13980af2.chunk.js.map": "/IP-ADRESS-API/static/js/787.13980af2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51a9129d.css",
+    "static/js/main.b61ac553.js"
+  ]
+}
