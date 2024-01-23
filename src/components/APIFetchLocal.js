@@ -31,7 +31,7 @@ export default function API_Fetch1() {
     useEffect(() => {
 
     const accepted = (positioner) => {
-        // console.log("Current positioner:", positioner);
+        console.log("Current positioner:", positioner);
         setCoordi(positioner)
     };
     const refused = (error) => {
@@ -53,7 +53,7 @@ const DataFetch1 = async () => {
         const data = await response.json();
         setLoading1(false)
         setApi1(data);
-        console.log("data",data)
+        console.log("data local nav",data)
     } catch (error) {
 		console.log(error);
 		}

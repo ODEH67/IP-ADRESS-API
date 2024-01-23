@@ -28,7 +28,8 @@ export default function API_Fetch({exchanging}) {
 const DataFetch = async () => {
 
     try {
-        const response = await fetch(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=${process.env.REACT_APP_API_KEY}`);
+        const apiKey = process.env.REACT_APP_API_KEY;
+        const response = await fetch(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=${apiKey}`);
         if (!response.ok) {
             throw new Error(`Request failed, status: ${response.status}`);
         }
@@ -102,7 +103,7 @@ const CountryObjectName = CountryCodes.customList('countryCode','{countryNameEn}
             </div>
             <div className="additional-list">
                 <h2 className="headline-info-bottom">Wanna know more?</h2>
-                {/* extra idea, the code under this comment is for more info about the location, can be added in a dropdown Menu with the country code  */}
+                {/* extra idea, the code under this comment is for more info about the location, added in a dropdown Menu with the country code  */}
                 <CountryInfos 
                 Timezone={api.location.timezone} 
                 PostalCode={api.location.postalCode} 
@@ -129,51 +130,8 @@ const CountryObjectName = CountryCodes.customList('countryCode','{countryNameEn}
     </div>
 </div>
 </>
-    )
-    }
-
-                                    {/* all infos without styling */}
-    {/*<section className="App_body">
-        <div className="App_space">
-            <h3>IP Adress</h3>
-            <div className="body_elements">
-            {loading ? (
-				<SyncLoader
-					color="blue"
-					cssOverride={{ margin: "40vh auto" }}
-					loading
-					size={90}
-				/>
-			) : (
-                <>
-                <div className="map_container">
-                    < Map
-                    lati ={api && api.location && api.location.lat && (api.location.lat)}
-                    lngi ={api && api.location && api.location.lng && (api.location.lng)} />
-                </div>
-                <div className="ip_adress">
-                    <p>ip adress : {api.ip}</p>
-                </div>
-                <div className="location_container">
-                    <Flag country={api.location.country} apii={api}/>
-                    {CountryObjectName[api.location.country ] && <div>Country: {CountryObjectName[api.location.country ]}</div>}
-
-                     //extra idea, the code under this comment is for more info about the location, can be added in a dropdown Menu with the country code 
-                    <CountryInfos CountryCode={api && api.location && api.location.country && (api.location.country)}/>
-
-                    <p>Country Code: {api.location.country}</p>
-                    <p>region: {api.location.region}</p>
-                    <p>city: {api.location.city}</p>
-                    {api.location.postalCode && <p>postalCode:{api.location.postalCode}</p> }
-                    <p>timezone: {api.location.timezone}</p>
-                    <p>using VPN: {api.proxy.vpn === false ? "No" : "Yes"}</p> 
-                    <DateTime/>
-                </div>
-                </>)}
-            </div>
-        </div>
-    </section>*/}
-
-    </>
-    )
-    }
+)
+}
+</>
+)
+}
